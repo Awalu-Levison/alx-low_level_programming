@@ -9,14 +9,14 @@ int main(void)
 	int age;
 	long int phone;
 	long long int addr;
-	float floating;
+	float flo;
 
 	/*Size declaration*/
 	printf("Size of a char: %lu byte(s)\n", sizeof(j));
 	printf("Size of an int: %lu byte(s)\n", sizeof(age));
 	printf("Size of a long int: %lu byte(s)\n", sizeof(phone);
 	printf("Size of a long long int: %lu byte(s)\n", sizeof(long long int addr);
-	printf("Size of a float: %lu byte(s)0\n", sizeof(floating);
+	printf("Size of a float: %lu byte(s)\n", sizeof(flo);
 
 	return (0);
 }
