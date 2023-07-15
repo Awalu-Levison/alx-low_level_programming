@@ -5,18 +5,11 @@
  */
 int main(void)
 {
-	char j;
-	int age;
-	long int phone;
-	long long int addr;
-	float flo;
-
-	/*Size declaration*/
-	printf("Size of a char: %lu byte(s)\n", sizeof(j));
-	printf("Size of an int: %lu byte(s)\n", sizeof(age));
-	printf("Size of a long int: %lu byte(s)\n", sizeof(phone);
-	printf("Size of a long long int: %lu byte(s)\n", sizeof(long long int addr);
-	printf("Size of a float: %lu byte(s)\n", sizeof(flo);
+	printf("Size of a char: %lu byte(s)\n", sizeof(char));
+	printf("Size of an int: %lu byte(s)\n", sizeof(int));
+	printf("Size of a long int: %lu byte(s)\n", sizeof(long int);
+	printf("Size of a long long int: %lu byte(s)\n", sizeof(long long int);
+	printf("Size of a float: %lu byte(s)\n", sizeof(float);
 
 	return (0);
 }
