@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main - Entry point of program execution
  * Description - A program to print values of  n interger values
