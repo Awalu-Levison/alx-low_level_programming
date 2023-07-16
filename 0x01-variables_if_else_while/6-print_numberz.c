@@ -13,4 +13,5 @@ int main(void)
 		putchar((numberz % 10) + '0');
 	}
 	putchar('\n');
+	return (0);
 }
