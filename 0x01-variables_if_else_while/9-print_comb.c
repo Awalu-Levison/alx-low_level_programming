@@ -8,7 +8,7 @@ int main(void)
 {
 	int special_numbers;
 
-	for (special_numbers = 0; special_numbers < 10; special_numbers++)
+	for (special_numbers = '0'; special_numbers < '10'; special_numbers++)
 	{
 		putchar(special_numbers);
 		putchar(',');
