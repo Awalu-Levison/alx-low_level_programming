@@ -12,11 +12,9 @@ int main(void)
 	{
 		putchar((special_numbers % 10) + '0');
 		if (special_numbers == 9)
-		{
 			continue;
 			putchar(',');
 			putchar(' ');
-		}
 	}
 	putchar('\n');
 	return (0);
