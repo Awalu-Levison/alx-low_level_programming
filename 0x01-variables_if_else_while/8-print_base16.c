@@ -11,7 +11,7 @@ int main(void)
 
 	for (hexa_decimals = 0; hexa_decimals < 10; hexa_decimals++)
 	{
-		putchar(hexa_decimals);
+		putchar((hexa_decimals % 10) + '0');
 	}
 	for (hex_letters = 'a'; hex_letters <= 'f'; hex_letters++)
 	{
