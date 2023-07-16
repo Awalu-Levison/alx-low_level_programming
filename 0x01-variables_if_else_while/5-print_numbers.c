@@ -10,7 +10,7 @@ int main(void)
 
 	for (nambaz = 0; nambaz < 10; nambaz++)
 	{
-		printf(nambaz);
+		printf("%d", nambaz);
 	}
 	printf("\n");
 }
