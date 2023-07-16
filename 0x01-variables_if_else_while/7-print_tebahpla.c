@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	char reverse;
+	int reverse_letters;
 
-	for (reverse = 122; reverse <= 97; reverse--)
+	for (reverse_letters = 122; reverse_letters <= 97; reverse_letters--)
 	{
-		putchar(reverse);
+		putchar(reverse_letters);
 	}
 	putchar('\n');
 	return (0);
