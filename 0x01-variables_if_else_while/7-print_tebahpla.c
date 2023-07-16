@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int reverse_letters;
+	char reverse_letters;
 
-	for (reverse_letters = '122'; reverse_letters <= '97'; reverse_letters--)
+	for (reverse_letters = 'z'; reverse_letters <= 'a'; reverse_letters--)
 	{
 		putchar(reverse_letters);
 	}
