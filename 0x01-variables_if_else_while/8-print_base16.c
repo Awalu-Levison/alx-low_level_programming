@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char hexa_decimals;
+	int hexa_decimals;
 	char hex_letters;
 
 	for (hexa_decimals = '0'; hexa_decimals < '10'; hexa_decimals++)
