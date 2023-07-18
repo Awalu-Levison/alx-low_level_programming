@@ -17,13 +17,11 @@ int main(void)
 			putchar((second_num % 10) + '0');
 
 			if (first_num == 8 && second_num == 9)
-			{
 				continue;
 				putchar(',');
 				putchar(' ');
-			}
 		}
-		putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
