@@ -11,15 +11,17 @@ int main(void)
 
 	for (first_num = 0; first_num < 9; first_num++)
 	{
-		for (second_num = 1; second_num < 10; second_num++)
+		for (second_num = first_num + 1; second_num < 10; second_num++)
 		{
 			putchar((first_num % 10) + '0');
 			putchar((second_num % 10) + '0');
 
 			if (first_num == 8 && second_num == 9)
+			{
 				continue;
 				putchar(',');
 				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
