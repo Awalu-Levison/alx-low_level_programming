@@ -1,19 +1,17 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * main - Entry point of program execution
- * void print_alphabet:Printing alphabet in lower cases
- * Return: (0 Always successful execution)
+ * Description: A program to print lowercases
+ * Return: (0 to print alphabet to the screen)
+ * print_alphabet: Upon successful completion return lowercases to the screen
  */
-int main(void)
+void print_alphabet(void)
 {
-	void print_alphabet(void)
+	char lower;
+
+	for (lower = 'a'; lower <= 'z'; lower++)
 	{
-	for (char lowercase = 'a'; lowercase <= 'z'; lowercase++)
-	{
-		_putchar(lowercase);
+		_putchar(lower);
 	}
-		_putchar('\n');
-	}
+	_putchar('\n');
 	return (0);
 }
