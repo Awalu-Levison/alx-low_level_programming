@@ -14,4 +14,19 @@ void jack_bauer(void)
 			for (num3 = 0; num3 <= 5; num3++)
 			{
 				for (num4 = 0; num4 <= 9; num4++)
+				{
+					if (num1 >= 2 && num2 >= 4)
+					{
+						break;
+						_putchar(48);
+						_putchar(48);
+						_putchar(58);
+						_putchar(48);
+						_putchar(48);
+						_putchar('\n);
+					}
+				}
+			}
+		}
+	}
 }
