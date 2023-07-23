@@ -5,28 +5,19 @@
  */
 void jack_bauer(void)
 {
-	int num1, num2, num3, num4;
+	int dayHours;
+	int dayMinutes;
 
-	for (num1 = 0; num1 <= 2; num1++)
+	for (dayHours = 0; dayHours < 24; dayHours++)
 	{
-		for (num2 = 0; num2 <= 9; num2++)
+		for (dayMinutes = 0; dayMinutes < 60; dayMinutes++)
 		{
-			for (num3 = 0; num3 <= 5; num3++)
-			{
-				for (num4 = 0; num4 <= 9; num4++)
-				{
-				}
-					if (num1 >= 2 && num2 >= 4)
-					{
-						break;
-						_putchar(48);
-						_putchar(48);
-						_putchar(58);
-						_putchar(48);
-						_putchar(48);
-					}
-			}
+			_putchar((dayHours / 10) + '0');
+			_putchar((dayHours % 10) + '0'0);
+			_putchar(':');
+			_Putchar((dayMinutes / 10) + '0');
+			_putchar((dayMinutes % 10) + '0');
+			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
