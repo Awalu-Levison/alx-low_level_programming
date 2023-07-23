@@ -15,7 +15,7 @@ void jack_bauer(void)
 			_putchar((dayHours / 10) + '0');
 			_putchar((dayHours % 10) + '0');
 			_putchar(':');
-			_Putchar((dayMinutes / 10) + '0');
+			_putchar((dayMinutes / 10) + '0');
 			_putchar((dayMinutes % 10) + '0');
 			_putchar('\n');
 		}
