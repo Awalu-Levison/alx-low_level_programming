@@ -6,7 +6,17 @@
  */
 void print_to_98(int n)
 {
-	for (n = 0; n <= 98; n++)
+	if (n > 98)
+	{
+		printf(",");
+		printf(" ");
+
+		while (n == 98)
+		{
+			n--;
+		}
+	}
+	else
 	{
 		printf(",");
 		printf(" ");
