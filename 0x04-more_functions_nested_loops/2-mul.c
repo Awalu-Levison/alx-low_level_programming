@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * mul - Multipies two intergers
  * @a:First parameter
