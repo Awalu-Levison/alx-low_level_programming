@@ -9,10 +9,6 @@ void print_line(int n)
 	{
 		_putchar('_');
 	}
-	else if (n < 0 && n == 0)
-	{
-		_putchar('\n');
-	}
 	else
 	{
 		_putchar('\n');
