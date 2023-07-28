@@ -13,8 +13,8 @@ void more_numbers(void)
 		for (second_number = '0'; second_number <= '14'; second_number++)
 		{
 			_putchar(second_number);
-			_putchar('\n');
 		}
+			_putchar('\n');
 	}
 	_putchar('\n');
 }
