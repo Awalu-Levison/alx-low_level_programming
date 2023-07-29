@@ -1,11 +1,11 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * _printFizzBuzz - Prints Fizz (multiples of 3),
  * Buzz (multiples of 5), and FizzBuzz (multiples of both 3 and 5).
  * @n:Parameter to use
- * Return: (0 on successful execution)
  */
-int _printFizzBuzz(int n)
+void _printFizzBuzz(int n)
 {
 	int n;
 
@@ -29,5 +29,4 @@ int _printFizzBuzz(int n)
 		}
 		printf("\n");
 	}
-	return (0);
 }
