@@ -18,8 +18,8 @@ void print_square(int size)
 			for (number2 = 0; number2 < number1; number2++)
 			{
 			_putchar('#');
-			}
 			_putchar('\n');
+			}
 		}
 	}
 }
