@@ -29,4 +29,5 @@ int _printFizzBuzz(int n)
 		}
 		printf("\n");
 	}
+	return (0);
 }
