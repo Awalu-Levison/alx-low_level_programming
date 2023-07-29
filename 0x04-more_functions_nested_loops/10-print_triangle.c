@@ -5,7 +5,7 @@
  */
 void print_triangle(int size)
 {
-	int i, j;
+	int times, figure;
 
 	if (size <= 0)
 	{
@@ -13,9 +13,13 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (i = 0; i < size; i++)
+		for (times = 1; times <= size; times++)
 		{
-			for (j = 0; j < i; j++)
+			for (figures = size - times0; figures >= 1; figures--)
+			{
+				_putchar(' ');
+			}
+			for (int symbol = 1; symbol <= times; symbol++)
 			{
 				_putchar('#');
 			}
