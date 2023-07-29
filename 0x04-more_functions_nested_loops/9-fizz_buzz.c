@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int n;
+	int number_series;
 
-	for (n = 1; n <= 100; n++)
+	for (number_series = 1; number_series <= 100; number_series++)
 	{
 		if (number_series % 3 == 0)
 			printf("Fizz");
