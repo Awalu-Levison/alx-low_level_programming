@@ -27,6 +27,6 @@ void _printFizzBuzz(int n)
 		{
 			printf("%d ", number_series);
 		}
-		printf("\n");
 	}
+	printf("\n");
 }
