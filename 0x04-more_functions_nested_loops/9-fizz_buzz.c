@@ -17,7 +17,9 @@ int main(void)
 		else if (number_series % 15 == 0)
 			printf("FizzBuzz");
 		else
-			printf("%d ", number_series);
+			printf("%d", number_series);
+		if (number_series < 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
