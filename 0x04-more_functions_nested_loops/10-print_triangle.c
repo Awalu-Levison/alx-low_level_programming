@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_triangle - Prints tringle based on the given size
- * @size:Parameter to check
+ * print_triangle - Prints a tringle based on the given size
+ * @size:Parameter to be used
  */
 void print_triangle(int size)
 {
-	int times, figure, symbol;
+	int iteration, space, symbol;
 
 	if (size <= 0)
 	{
@@ -13,17 +13,16 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (times = 1; times <= size; times++)
+		for (iteration = 1; iteration <= size; iteration++)
 		{
-			for (figures = size - times; figures >= 1; figures--)
+			for (space = size - iteration; space >= 1; space++)
 			{
-				_putchar(' ');
+				for (symbol = 1; symbol <= iteration; symbol++)
+				{
+					_putchar('#');
+				}
+				_putchar('\n');
 			}
-			for (symbol = 1; symbol <= times; symbol++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
 		}
 	}
 }
