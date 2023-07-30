@@ -10,9 +10,9 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar(45);
-		first_value = -first_value;
+		_putchar(first_value);
 	}
-	if (first_value / 10)
+	else
 	{
 		_putchar(first_value / 10);
 		_putchar(first_number % 10 + '0');
