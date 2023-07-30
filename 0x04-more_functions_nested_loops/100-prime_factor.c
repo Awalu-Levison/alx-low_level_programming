@@ -19,6 +19,8 @@ int main(void)
 				printf("%ld\n", second_number);
 				break;
 			}
+			third_number = initial_number / second_number;
+			initial_number = third_number;
 		}
 	}
 	return (0);
