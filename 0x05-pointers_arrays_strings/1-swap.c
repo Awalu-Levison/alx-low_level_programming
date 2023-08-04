@@ -6,8 +6,11 @@
  */
 void swap_int(int *a, int *b)
 {
-	*a = &b;
+	int swap_point;
 
-	/*Swapping values in memory addresses*/
-	swap(*a, *b);
+	swap_point = *a;
+
+	*a = *b;
+
+	*b = swap_point;
 }
