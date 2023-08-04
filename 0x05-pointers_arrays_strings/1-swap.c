@@ -9,5 +9,5 @@ void swap_int(int *a, int *b)
 	*a = *b;
 
 	/*Swapping values in memory addresses*/
-	swap(&a, &b);
+	swap(*a, *b);
 }
