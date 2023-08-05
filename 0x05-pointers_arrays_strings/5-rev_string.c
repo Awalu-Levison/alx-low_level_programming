@@ -16,7 +16,7 @@ void rev_string(char *s)
 	}
 	for (var_const = s - 1; var_const >= 0; var_const--)
 	{
-		return (var_const);
+		return (s[var_const]);
 	}
 	_putchar('\n');
 }
