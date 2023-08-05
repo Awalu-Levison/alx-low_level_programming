@@ -14,7 +14,7 @@ void rev_string(char *s)
 		counter++;
 		s++;
 	}
-	for (var_const = s - 1; var_const >= 0; var_const--)
+	for (var_const = counter - 1; var_const >= 0; var_const--)
 	{
 		return (s[var_const]);
 	}
