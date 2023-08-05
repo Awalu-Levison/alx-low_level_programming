@@ -9,14 +9,14 @@ void rev_string(char *s)
 	/*int var_const;*/
 
 
-	while (*s != '\0')
+	while (s[counter] != '\0')
 	{
 		counter++;
 		s++;
 	}
-	for (counter = *s - 1; counter >= 0; counter--)
+	for (var_const = s - 1; var_const >= 0; var_const--)
 	{
-		return (counter);
+		return (var_const);
 	}
 	_putchar('\n');
 }
