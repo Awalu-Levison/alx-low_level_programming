@@ -5,8 +5,8 @@
  */
 void rev_string(char *s)
 {
-	char first_var;
-	int second_var;
+	char first_var = s[0];
+	int second_var = 0;
 	int third_var;
 
 	while (s[second_var] != '\0')
