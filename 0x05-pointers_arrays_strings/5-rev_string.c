@@ -5,19 +5,18 @@
  */
 void rev_string(char *s)
 {
-	int counter = 0;
-	int var_const;
+	int counter, first_var;
+	char var_const;
 
+	counter = 0;
 
 	while (s[counter] != '\0')
 	{
 		counter++;
-		s++;
 	}
-	return (s[var_const]--);
-	/*for (var_const = counter - 1; var_const >= 0; --var_const)*/
-	/*{*/
-	/*_putchar (s[var_const]);*/
-	/*}*/
-	_putchar('\n');
+	for (first_var = 0; first_var < counter / 2; first_var++)
+	{
+		var_const = s[counter - first_var - 1];
+		var_const = s[counter - first_var - 1];
+	}
 }
