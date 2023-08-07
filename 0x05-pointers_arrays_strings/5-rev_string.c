@@ -18,7 +18,7 @@ void rev_string(char *s)
 
 	for (second_var = 0; third_var >= 0 && second_var < third_var; third_var--, second_var++)
 	{
-		temporary = s[b];
+		temporary = s[second_var];
 		s[second_var] = s[third_var];
 		s[third_var] = temporary;
 	}
