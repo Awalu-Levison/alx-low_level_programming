@@ -10,7 +10,9 @@ void rev_string(char *s)
 	int third_var;
 
 	while (s[second_var] != '\0')
+	{
 		second_var++;
+	}
 	for (third_var = 0; third_var < second_var; third_var++)
 	{
 		second_var--;
