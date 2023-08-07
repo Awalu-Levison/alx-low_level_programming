@@ -5,19 +5,21 @@
  */
 void rev_string(char *s)
 {
-	char first_var = s[0];
-	int second_var = 0;
+	int first_var = 0;
+	int second_var;
 	int third_var;
+	char temporary;
 
-	while (s[second_var] != '\0')
+	while (s[first_var] != '\0')
 	{
-		second_var++;
+		first_var++;
 	}
-	for (third_var = 0; third_var < second_var; third_var++)
+	third_var = first_var - 1;
+
+	for (second_var = 0; third_var >= 0 && second_var < third_var; third_var--, second_var++)
 	{
-		second_var--;
-		first_var = s[third_var];
-		third_var = s[second_var];
-		s[second_var] = first_var;
+		temporary = s[b];
+		s[second_var] = s[third_var];
+		s[third_var] = temporary;
 	}
 }
