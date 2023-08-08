@@ -7,12 +7,13 @@
  */
 void print_array(int *a, int n)
 {
-	int array[n];
+	int array[], i;
+	n = 0;
 
-	while (*a != NULL)
+	while (a[i] != NULL)
 	{
 		printf("%d, ", array(n));
-		*a++;
+		a++;
 	}
 	_putchar('\n');
 }
