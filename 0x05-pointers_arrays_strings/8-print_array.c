@@ -9,7 +9,7 @@ void print_array(int *a, int n)
 {
 	n = 0;
 
-	int array[n], i;
+	int array[n] = {};
 
 	while (a[i] != NULL)
 	{
