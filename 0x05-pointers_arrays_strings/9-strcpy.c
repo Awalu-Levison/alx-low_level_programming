@@ -3,6 +3,7 @@
  * *_strcpy - Copying strings between two pointers
  * @dest: first char
  * @src: second char
+ * Return: 0 is success
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -12,4 +13,6 @@ char *_strcpy(char *dest, char *src)
 		dest[v] = src[v];
 	dest[v] = '\0';
 	return (dest);
+
+	return (0);
 }
