@@ -7,8 +7,9 @@
  */
 void print_array(int *a, int n)
 {
-	int array[], i;
 	n = 0;
+
+	int array[n], i;
 
 	while (a[i] != NULL)
 	{
