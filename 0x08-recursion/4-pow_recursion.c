@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * _pow_recursion - Calculating the power of
  * given number provided with its power
