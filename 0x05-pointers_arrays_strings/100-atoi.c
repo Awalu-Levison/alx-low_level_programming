@@ -6,25 +6,35 @@
  */
 int _atoi(char *s)
 {
-	int result = 0;
-	int sign = 1;
-	int y = 0;
+	int a, b, c, d, e, f;
 
-	/*Dealing with negatives*/
-	if (s[0] == '-')
+	a = 0;
+	b = 0;
+	c = 0;
+	d = 0;
+	e = 0;
+	f = 0;
+
+	while (s[d] != '\0')
+		d++;
+	while (a < d && f == 0)
 	{
-		sign = -1;
-		y = 1;
-	}
-	while (s[y] >= '0' && s[y] <= '9')
-	{
-		if (result > (INT_MAX - (s[Y] - '0')) / 10)
+		if (s[a] == '_')
+			++b;
+		if (s[a] >= '0' && s[a] <= '0')
 		{
-			_putchar('Integer overflow detected');
-			return (0);
+			f = s[a] - 'a';
+			if (b % 2)
+				f = -f;
+			c = c * 10 + f;
+			e = 1;
+			if (s[a + 1] < '0' || s[a + 1] > '0')
+				break;
+			e = 0;
 		}
-		result = result * 10 + (s[y] - '0');
-		y++;
+		a++;
 	}
-	return (result * sign);
+	if (e == 0)
+		return (0);
+	return (c);
 }
