@@ -35,6 +35,6 @@ int _atoi(char *s)
 		a++;
 	}
 	if (e == 0)
-		return (0);
 	return (c);
+	return (0);
 }
