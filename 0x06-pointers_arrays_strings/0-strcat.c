@@ -7,6 +7,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
+	char combined[] = {};
 	while (*dest != '\0')
 	{
 		dest++;
@@ -17,6 +18,7 @@ char *_strcat(char *dest, char *src)
 		dest++;
 		src++;
 	}
-	*dest + *src = '\0';
+	*dest = '\0';
+	combined[] = {dest + src};
 	return (0);
 }
