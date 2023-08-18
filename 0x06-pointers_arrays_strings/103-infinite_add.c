@@ -1,76 +1,79 @@
 #include "main.h"
+
 /**
- * rev_string - Reverse the given string
- * @s: Character variable to be used
+ * rev_string - Experience the art of
+ * reversing array
+ * @n: integer parameter to be checked upon
+ * Return: (0 upon successful execution)
  */
-void rev_string(char *s)
+
+void rev_string(char *n)
 {
-	int first_v = 0;
-	int second_v;
-	int third_v;
-	char temporary;
+	int i = 0;
+	int j = 0;
+	char m;
 
-	while (s[first_v] != '\0')
+	while (*(n + i) != '\0')
 	{
-		first_v++;
+		i++;
 	}
-	third_v = first_v - 1;
+	i--;
 
-	for (second_v = 0; third_v >= 0 && second_v < third_v; third_v--, second_v++)
+	for (j = 0; j < i; j++, i--)
 	{
-		temporary = s[second_v];
-		s[second_v] = s[third_v];
-		s[third_v] = temporary;
+		m = *(n + j);
+		*(n + j) = *(n + i);
+		*(n + i) = m;
 	}
 }
 
 /**
- * *infinite_add - Adding infinite numbers
- * @n1: First Number
- * @n2: Second Number
- * @r: The memory buffer to be used
- * @size_r: The size of the buffer
- * Return: Character value
+ * infinite_add - Adding infinite numbers in C
+ * @n1: 1st number to add
+ * @n2: 2nd number to add
+ * @r: Buffert memory to use
+ * @size_r: buffer size
+ * Return: pointer to calling function
  */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a, b, c, d;
-	int e, f, g;
+	int a = 0, b = 0, j = 0, digits = 0;
+	int val1 = 0, val2 = 0, temp_tot = 0;
 
 	while (*(n1 + b) != '\0')
-		b++;
-	while (*(n2 + c) != '\0')
-		c++;
+		i++;
+	while (*(n2 + j) != '\0')
+		j++;
 	b--;
-	c--;
-
-	if (c >= size_r || b >= size_r)
+	j--;
+	if (j >= size_r || b >= size_r)
 		return (0);
-	while (c >= 0 || b >= 0 || a == 1)
+	while (j >= 0 || b >= 0 || a == 1)
 	{
 		if (b < 0)
-			e == 0;
+			val1 = 0;
 		else
-			e = *(n1 + b) - '0';
-		if (c < 0)
-			f = 0;
+			val1 = *(n1 + b) - '0';
+		if (j < 0)
+			val2 = 0;
 		else
-			f = *(n2 + c) - '0';
-		f = e + f + a;
-		if (g >= 10)
+			val2 = *(n2 + j) - '0';
+		temp_tot = val1 + val2 + a;
+		if (temp_tot >= 10)
 			a = 1;
 		else
 			a = 0;
-		if (d >= (size_r - 1))
+		if (digits >= (size_r - 1))
 			return (0);
-		*(r + d) = (g % 10) + '0';
-		d++;
-		b++;
-		c++;
+		*(r + digits) = (temp_tot % 10) + '0';
+		digits++;
+		j--;
+		b--;
 	}
-	if (d == size_r)
+	if (digits == size_r)
 		return (0);
-	*(r + d) = '\0';
+	*(r + digits) = '\0';
 	rev_string(r);
 	return (r);
 }
