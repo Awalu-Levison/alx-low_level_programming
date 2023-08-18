@@ -12,7 +12,6 @@ char *cap_string(char *i)
 	while (i[n])
 	{
 		while (!(i[n] >= 'a') && (i[n] <= 'z'))
-		{
 			n++;
 
 		if (i[n - 1] == ' ' ||
@@ -28,10 +27,9 @@ char *cap_string(char *i)
 		i[n - 1] == ')' ||
 		i[n - 1] == '{' ||
 		i[n - 1] == '}' ||
-		n == 0);
+		n == 0)
 			i[n] -= 32;
 		n++;
-		}
 	}
 	return (i);
 }
