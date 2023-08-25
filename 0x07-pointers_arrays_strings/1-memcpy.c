@@ -8,13 +8,13 @@ include "main.h"
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int y;
+	int y = 0;
 
 	int v = n;
 
-	for (y = 0; y < v; y++)
+	for (; y < v; y++)
 	{
-		dest[y] = src[y]
+		dest[y] = src[y];
 		n--;
 	}
 	return (dest);
