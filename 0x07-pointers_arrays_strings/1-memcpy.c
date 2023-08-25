@@ -8,11 +8,11 @@ include "main.h"
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int y = 0;
+	int y;
 
 	int v = n;
 
-	for (; y < v; y++)
+	for (y = 0; y < v; y++)
 	{
 		dest[y] = src[y]
 		n--;
