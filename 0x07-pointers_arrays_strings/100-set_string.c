@@ -8,18 +8,5 @@
  */
 void set_string(char **s, char *to)
 {
-	int i;
-	int converted_char;
-
-	for (i = 0; s[i] >= '\0'; i++)
-	{
-		converted_char++;
-	}
-	while (*to)
-	{
-		to[converted_char] = &s[i];
-		to++;
-		i++;
-	}
+	*s = to;
 }
-
