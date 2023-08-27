@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * set_string - A function that sets pointer to a character
