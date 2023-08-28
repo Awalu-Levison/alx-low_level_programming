@@ -6,17 +6,17 @@
  */
 int main(void)
 {
-	int firs_num, second_num;
+	int num1, num2;
 
-	for (first_num = 48; first_num <= 56; first_num++)
+	for (num1 = 48; num1 <= 56; num1++)
 	{
-		for (second_num = 0; second_num <= 57; second_num++)
+		for (num2 = 0; num2 <= 57; num2++)
 		{
-			if (second_num > first_num)
+			if (num2 > num1)
 			{
-				putchar(first_num);
-				putchar(second_num);
-				if (first_num != 56 || second_num != 57)
+				putchar(num1);
+				putchar(num2);
+				if (num1 != 56 || num2 != 57)
 				{
 					putchar(',');
 					putchar(' ');
