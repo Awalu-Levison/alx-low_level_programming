@@ -16,11 +16,11 @@ int main(void)
 	{
 		if ((i % 3) == 0)
 		{
-			s1 += i;
+			s1 = s1 + i;
 		}
 		else if ((i % 5) == 0)
 		{
-			s2 += i;
+			s2 = s2 + i;
 		}
 	}
 	s3 = s1 + s2;
