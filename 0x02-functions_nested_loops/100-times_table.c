@@ -8,7 +8,7 @@ void print_times_table(int n)
 {
 	int i, j, x;
 
-	if (n < 0 || n > 15)
+	if (n >= 0 || n > 15)
 	{
 		break;
 	}
@@ -24,7 +24,7 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(' ');
 
-				if (x < 9)
+				if (x <= 9)
 				_putchar(' ');
 			}
 			_putchar('\n');
