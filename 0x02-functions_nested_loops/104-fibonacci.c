@@ -16,7 +16,7 @@ int main(void)
 	{
 		printf(", %lu", c);
 		c = c + b;
-		j = c - b;
+		b = c - b;
 	}
 
 	j1 = b / 1000000000;
