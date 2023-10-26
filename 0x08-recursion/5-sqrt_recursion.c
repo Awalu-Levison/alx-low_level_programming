@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * sqrt - Calculate natural square root of a number
+ * sqrt_number - Calculate natural square root of a number
  * @x: First number
  * @y: Second number
  * Return: Square root of a given numbers else -1
  */
-int sqrt(int x, int y)
+int sqrt_number(int x, int y)
 {
 	if (y * y == x)
 	{
@@ -26,5 +26,5 @@ int sqrt(int x, int y)
  */
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 0));
+	return (sqrt_number(n, 0));
 }
