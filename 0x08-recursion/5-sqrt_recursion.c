@@ -11,7 +11,7 @@ int sqrt_number(int x, int y)
 	{
 		return (y);
 	}
-	else if (y * y > 4)
+	else if (y * y > x)
 	{
 		return (-1);
 	}
