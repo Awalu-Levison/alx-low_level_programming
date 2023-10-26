@@ -19,6 +19,7 @@ int sqrt_number(int x, int y)
 	{
 		return (sqrt_number(x, y + 1));
 	}
+}
 /**
  * _sqrt_recursion - Find the natural square root of a number
  * @n: The number to be used
