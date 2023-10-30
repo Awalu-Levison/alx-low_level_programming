@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Printing out the program name in commandline environment
  *
@@ -8,9 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	(void)argc;
-
-	printf("%s\n", *argv[0]);
+	_putchar(argv[0]);
+	_putchar('\n');
 
 	return (0);
 }
