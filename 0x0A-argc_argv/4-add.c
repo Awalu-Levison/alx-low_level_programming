@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, sum = 0;
+	int a, b, add = 0;
 
 	for (a = 1; a < argc; a++)
 	{
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		sum += atoi(argv[a][b]);
+		add += atoi(argv[a][b]);
 	}
 	printf("%d\n", sum);
 
