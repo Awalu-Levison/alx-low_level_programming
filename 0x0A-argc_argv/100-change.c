@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	cets = atoi(rgv[1]);
+	cents = atoi(rgv[1]);
 
 	for (cents > 0)
 	{
