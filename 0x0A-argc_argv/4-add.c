@@ -10,19 +10,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, add = 0;
+	int i, j, add = 0;
 
-	for (a = 1; a < argc; a++)
+	for (i = 1; i < argc; i++)
 	{
-		for (b = 0; argv[a][b] != '\0'; b++)
+		for (j = 0; argv[i][j] != '\0'; b++)
 		{
-			if (!isdigit(argv[a][b]))
+			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		add += atoi(argv[a][b]);
+		add += atoi(argv[i][j]);
 	}
 	printf("%d\n", add);
 
