@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * *_strdup - Creating pointer to allocated space
  * @str: The string to be used
