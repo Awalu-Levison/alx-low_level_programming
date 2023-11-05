@@ -17,8 +17,8 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	int grid-array[width][height] = {0, 0, 0, 0};
-	int *pointer = grid-array;
+	int array[width][height] = {0, 0, 0, 0};
+	int *pointer = array;
 
 	return (ponter);
 }
