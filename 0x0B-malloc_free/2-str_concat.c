@@ -37,7 +37,6 @@ char *str_concat(char *s1, char *s2)
 	point = malloc(sizeof(char) * (a + b + 1));
 	if (point == NULL)
 	{
-		free(point);
 		return (NULL);
 	}
 	for (c = 0; c < a; c++)
@@ -50,4 +49,5 @@ char *str_concat(char *s1, char *s2)
 		c++;
 	}
 	return (point);
+	free(point);
 }
