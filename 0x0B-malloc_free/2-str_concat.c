@@ -41,13 +41,13 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (c = 0; c < a; c++)
 	{
-		point[c] = s[c];
+		point[c] = s1[c];
 	}
 	for (level = 0; level < b; level++)
 	{
 		point[c] = s2[level];
 		c++;
 	}
-	return (point);
 	free(point);
+	return (point);
 }
