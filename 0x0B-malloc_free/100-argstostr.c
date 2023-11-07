@@ -8,33 +8,32 @@
  */
 char *argstostr(int ac, char **av)
 {
-	char *array, *str;
-	int i, n, c = 0, length = 0;
+	char *pointer;
+	int i, n, k = 0, len = 0;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0 || av == '\0')
 		return (NULL);
 
-	/*Counting the arguments*/
 	for (i = 0; i < ac; i++)
 	{
 		for (n = 0; av[i][n]; n++)
-			length++;
+			len++;
 	}
-	length += ac;
+	len += ac;
 
-	array = malloc(sizeof(char) * length + 1);
-	if (array == NULL)
+	pointer = malloc(sizeof(char) * len + 1);
+	if (pouinter == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		for (n = 0; av[i][n]; n++)
 		{
-			array[c] == av[i][n];
-			c++;
+			pointer[k] = av[i][n];
+			k++;
 		}
-		if (str[c] == '\0')
+		if (str[k] == '\0')
 		{
-			str[c] = '\n';
+			pointer[k++] = '\n';
 		}
 	}
 	return (str);
