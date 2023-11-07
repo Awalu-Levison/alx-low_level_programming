@@ -8,7 +8,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	char *array;
+	char *array, *str;
 	int i, n, c = 0, length = 0;
 
 	if (ac == 0 || av == NULL)
@@ -32,10 +32,10 @@ char *argstostr(int ac, char **av)
 			array[c] == av[i][n];
 			c++;
 		}
-		if (av[c] == '\0')
+		if (str[c] == '\0')
 		{
-			array[c] = '\n';
+			str[c] = '\n';
 		}
 	}
-	return (av);
+	return (str);
 }
