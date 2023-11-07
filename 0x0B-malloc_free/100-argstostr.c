@@ -12,12 +12,11 @@ char *argstostr(int ac, char **av)
 	int i, n, c = 0, length = 0;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
+
 	/*Counting the arguments*/
 	for (i = 0; i < ac; i++)
-	{
+ 	{
 		for (n = 0; av[i][n]; n++)
 			length++;
 	}
