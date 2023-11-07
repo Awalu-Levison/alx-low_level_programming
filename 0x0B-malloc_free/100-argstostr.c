@@ -16,21 +16,21 @@ char *argstostr(int ac, char **av)
 
 	/*Counting the arguments*/
 	for (i = 0; i < ac; i++)
- 	{
+	{
 		for (n = 0; av[i][n]; n++)
 			length++;
 	}
 	length += ac;
 
 	array = malloc(sizeof(char) * length + 1);
-	if (*array == NULL)
+	if (array == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		for (n = 0; av[i][n]; n++)
 		{
 			array[c] == av[i][n];
-				c++;
+			c++;
 		}
 		if (av[c] == '\0')
 		{
