@@ -31,10 +31,10 @@ char *argstostr(int ac, char **av)
 			pointer[k] = av[i][n];
 			k++;
 		}
-		if (str[k] == '\0')
+		if (pointer[k] == '\0')
 		{
 			pointer[k++] = '\n';
 		}
 	}
-	return (str);
+	return (pointer);
 }
