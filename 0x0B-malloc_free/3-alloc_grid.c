@@ -8,32 +8,32 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j;
-	int **board; /*pointer represent the grid*/
+	int i, j, grid_length = height * width;
+	int **grid;
 
-	if (width <= 0 || height <= 0)
+	if (grid_length <= 0)
 	{
 		return (NULL);
 	}
-	board = malloc(height * width * sizeof(int *));
-	if (board == NULL)
+	grid = malloc(height * sizeof(int *));
+	if (grid == NULL)
 	{
-		free(board);
+		free(grid);
 		return (NULL);
 	}
 	for (i = 0; i < height; i++)
 	{
-		board[i] = malloc(width * sizeof(int));
-		if (board[i] == NULL)
+		grid[i] = malloc(width * sizeof(int));
+		if (grid[i] == NULL)
 		{
 			for (i--; i >= 0; i--)
-				free(board);
-			free(board[i]);
+				free(grid);
+			free(grid[i]);
 			return (NULL);
 		}
 	}
 	for (i = 0; i < height; i++)
 		for (j = 0; j < width; j++)
-			board[i][j] = 0;
-	return (board);
+			grid[i][j] = 0;
+	return (grid);
 }
