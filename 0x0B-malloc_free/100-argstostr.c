@@ -33,10 +33,10 @@ char *argstostr(int ac, char **av)
 			array[c] == av[i][n];
 				c++;
 		}
-		if (str[c] == '\0')
+		if (av[c] == '\0')
 		{
 			array[c] = '\n';
 		}
 	}
-	return (str);
+	return (av);
 }
