@@ -25,7 +25,7 @@ void ch_free_grid(char **grid, size_t height)
 char **strtow(char *str)
 {
 	char **pointer;
-	size_t c, height, i, j, k;
+	size_t c, height, i, j, size;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
