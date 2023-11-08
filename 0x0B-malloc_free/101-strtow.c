@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * ch_free_grid - First level entry function
  * @grid: First unput
