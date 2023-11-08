@@ -30,7 +30,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (c = height = 0; str[c] != '\0'; c++)
 		if (str[c] != ' ' && (str[c + 1] != ' ' || str[c + 1] != '\0'))
-			heigth++;
+			height++;
 	pointer = malloc(sizeof(char *) * (height = 1));
 	if (pointer == NULL)
 	{
