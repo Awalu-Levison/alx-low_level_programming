@@ -1,13 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 /**
  * ch_free_grid - First level entry function
  * @grid: First unput
  * @height: The height of the grid
  * Return: void
  */
-void ch_free_grid(char **grid, size_t height)
+void ch_free_grid(char **grid, unsigned int height)
 {
 	if (grid != NULL && height != 0)
 	{
@@ -25,7 +24,7 @@ void ch_free_grid(char **grid, size_t height)
 char **strtow(char *str)
 {
 	char **pointer;
-	size_t c, height, i, j, size;
+	unsigned int c, height, i, j, size;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
