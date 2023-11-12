@@ -5,6 +5,7 @@
  * @s: Parameter to be used
  * Return: (0 on successful execution)
  */
+int _strlen(char *s);
 int _strlen(char *s)
 {
 	int length = 0;
@@ -25,6 +26,7 @@ int _strlen(char *s)
  * @src: First char to check
  * Return: 0 is success
  */
+char *_strcpy(char *dest, char *src);
 char *_strcpy(char *dest, char *src)
 {
 	int a;
