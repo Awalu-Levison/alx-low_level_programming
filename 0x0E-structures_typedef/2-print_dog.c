@@ -10,7 +10,7 @@ void print_dog(struct dog *d)
 		return;
 
 	if (d->name == NULL)
-		d->name = "(nil)";
+		d->name = "Name: (nil)";
 	if (d->owner == NULL)
 		return ("(nil)");
 
