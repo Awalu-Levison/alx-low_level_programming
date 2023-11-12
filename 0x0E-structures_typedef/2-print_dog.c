@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * print_dog - Printing the dogs information
  * @d: The structure of particular dog
@@ -10,7 +11,7 @@ void print_dog(struct dog *d)
 		return;
 
 	if (d->name == NULL)
-		d->name = "Name: (nil)";
+		d->name = "(nil)";
 	if (d->owner == NULL)
 		return ("(nil)");
 
