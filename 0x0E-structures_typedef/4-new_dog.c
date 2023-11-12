@@ -10,10 +10,10 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t dog;
-	int len1, len2;
+	int a, b; /*a and b : lengths of name and owner*/
 
-	len1 = _strcpy(name);
-	len2 = _strcpy(owner);
+	a = _strlen(name);
+	b = _strlen(owner);
 
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
