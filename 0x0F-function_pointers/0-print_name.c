@@ -14,6 +14,12 @@ void print_name(char *name, void (*f)(char *))
 	void (*f)(char *) = name;
 
 	actual_name = name;
-
-	printf("%s", actual_name);
+	if (name == NULL || f == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		printf("%s", actual_name);
+	}
 }
