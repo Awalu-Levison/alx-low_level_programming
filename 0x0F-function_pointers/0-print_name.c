@@ -9,17 +9,12 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	char *actual_name;
-
-	void (*f)(char *) = name;
-
-	actual_name = name;
 	if (name == NULL || f == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		printf("%s", actual_name);
+		f(name);
 	}
 }
