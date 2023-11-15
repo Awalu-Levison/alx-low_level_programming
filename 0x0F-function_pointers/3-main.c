@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int a, b; /*01st & 02nd number respectively*/
 	char *op;
 
-	if (argc > 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*op == '/' && b <= 0) ||
-			(*op == '%' && b <= 0))
+	if ((*op == '/' && b == 0) ||
+			(*op == '%' && b == 0))
 	{
 		printf("Error\n");
 		exit(100);
