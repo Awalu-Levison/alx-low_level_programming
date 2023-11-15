@@ -7,7 +7,7 @@
  * @argv: Arrays of pointers to actual arguments
  * Return: 0 upon successful execution
  */
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int a, b; /*01st & 02nd number respectively*/
 	char *op;
