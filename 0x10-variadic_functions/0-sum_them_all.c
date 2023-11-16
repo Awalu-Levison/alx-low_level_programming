@@ -10,6 +10,7 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int i, sum = 0;
 
 	va_list my_list;
+
 	va_start(my_list, n);
 
 	if (n == 0)
