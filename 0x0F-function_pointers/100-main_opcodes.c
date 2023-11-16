@@ -11,11 +11,13 @@ int main(int argc, char *argv[])
 	int bytes, i;
 	char *arr;
 
+	/*argument validation*/
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+	/*bytes conversion*/
 	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
@@ -23,8 +25,10 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
+	/*retrieve opcodes*/
 	arr = (char *)main;
 
+	/*print opcodes*/
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)
