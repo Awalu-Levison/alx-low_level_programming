@@ -19,7 +19,10 @@ int sum_them_all(const unsigned int n, ...)
 		{
 			return (0);
 		}
-		sum += va_arg(my_list, int);
+		else
+		{
+			sum += va_arg(my_list, const unsigned int);
+		}
 	}
 	va_end(my_list);
 
