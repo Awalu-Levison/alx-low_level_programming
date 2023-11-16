@@ -12,23 +12,19 @@ int sum_them_all(const unsigned int n, ...)
 
 	va_start(args, n);
 
-	if (n <= 0)
-	{
+	int x = va_arg(args, int);
+
+	while (n <= 0)
 		return (0);
-	}
-
-	int j = 0, i = 0;
-
-	else
+	while (n > 0)
 	{
-		while (i < n)
-		{
-			int x = va_arg(args, int);
+		int i, sum = 0;
 
-			j += x;
-			i++;
+		for (i = 0; i < n; i++)
+		{
+			sum += x;
 		}
 	}
 	va_end(args);
-	return (j);
+	return (sum);
 }
