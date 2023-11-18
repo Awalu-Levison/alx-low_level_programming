@@ -1,4 +1,7 @@
 #include "variadic_functions.h"
+#include <stdlib.h>
+#include <stdarg.h>
+#include <stdio.h>
 /**
  * print_strings - Printing strings with separators
  * @n: Number of strings to be printed
