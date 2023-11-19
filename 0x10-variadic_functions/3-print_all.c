@@ -1,9 +1,8 @@
 #include "variadic_functions.h"
 /**
- *  print_all - Print everything according
- *  to its type (e.g. int, char, float, string)
- *  @format: The passed argument to the function
- *  Return: argument passed
+ * print_all - Print everything as per specified
+ * @format: Format specifier
+ * Return: Specified string
  */
 void print_all(const char * const format, ...)
 {
@@ -13,13 +12,12 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 	i = 0;
-
-	while (format != NULL && format[i] != '\0')
+	while (format && format[i] != NULL)
 	{
 		switch (format[i])
 		{
 			case 'i':
-				printf("%d", va_arg(ap, int));
+				printf("%i", va_arg(ap, int));
 				j = 0;
 				break;
 			case 'f':
@@ -41,7 +39,7 @@ void print_all(const char * const format, ...)
 				j = 1;
 				break;
 		}
-		if (format[i + 1] != '\0' && j != 0)
+		if (format[i] != '\0' && j != 0)
 			printf(", ");
 		i++;
 	}
