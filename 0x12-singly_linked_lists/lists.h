@@ -4,17 +4,18 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * struct list_s - singly linked list
  * @str: String passed to the function
- * @length: The length of the string
+ * @len: The length of the string
  * @next: points to the next node of a list
  */
 typedef struct list_s
 {
 	char *str;
-	unsigned int length;
+	unsigned int len;
 	struct list_s *next;
 } list_t;
 
