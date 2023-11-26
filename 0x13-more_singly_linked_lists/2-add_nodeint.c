@@ -7,13 +7,16 @@
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	while (n)
-	{
-		struct node *new_node;
+	listint_t *new_node; /*new_node: Pointer to next node*/
 
-		new_node = (struct node *)malloc(sizeof(struct node));
-		new_node->next = head;
-		head = new_node;
-	}
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
+
+	new_node->n = n;
+	new_node->next = *head;
+
+	*head = new_node;
+
 	return (new_node);
 }
