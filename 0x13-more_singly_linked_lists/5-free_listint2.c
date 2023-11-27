@@ -8,8 +8,9 @@ void free_listint2(listint_t **head)
 {
 	listint_t *i; /*i: Temporary pointer*/
 
-	if (*head == NULL)
+	if (head == NULL)
 		return;
+
 	while (*head)
 	{
 		i = (*head)->next;
