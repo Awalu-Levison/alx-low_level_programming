@@ -1,10 +1,10 @@
 #include "lists.h"
 listint_t *extra_node(int n);
 /**
- * extra_node - Creating a new node
- * @n: Data of node
- * Return: Newly added node or NULL if fails
- */
+ ** extra_node - Creating a new node
+ ** @n: Data of node
+ ** Return: Newly added node or NULL if fails
+ **/
 listint_t *extra_node(int n)
 {
 	listint_t *new_node;
@@ -19,13 +19,13 @@ listint_t *extra_node(int n)
 }
 
 /**
- * insert_nodeint_at_index - Add node to the linked list
- * at a given position
- * @head: Pointer to the first node
- * @idx: Position to be used
- * @n: Number of elements
- * Return: Newly added node or NULL if fails
- */
+ ** insert_nodeint_at_index - Add node to the linked list
+ ** at a given position
+ ** @head: Pointer to the first node
+ ** @idx: Position to be used
+ ** @n: Number of elements
+ ** Return: Newly added node or NULL if fails
+ **/
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i;
