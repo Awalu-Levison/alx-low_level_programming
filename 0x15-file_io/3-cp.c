@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <fcntl.h>
 #include <unistd.h>
+#define BUFFER_SIZE 100
 void stat_checker(int stat, int fd, char *filename, char mode);
 /**
  * main - Function Copies content from one file to another
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
 	/*a: src, b: dest*/
 	int a, b, n = 1024, n_write, close_a, close_b;
 	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	char buffer[100];
+	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
 	{
