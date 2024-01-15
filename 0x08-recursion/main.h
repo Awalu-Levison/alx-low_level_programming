@@ -14,5 +14,7 @@ int wildcmp(char *s1, char *s2);
 
 int first_sqrt(int num1, int num2);
 int _prime_num_a(int num1, int num2);
+int recursive_strlen(char *s);
+int _str_compare(char *s, int first_char, int last_char);
 
 #endif
