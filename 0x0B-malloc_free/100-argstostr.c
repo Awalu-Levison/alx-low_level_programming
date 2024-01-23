@@ -9,8 +9,10 @@ char *argstostr(int ac, char **av)
 {
 	int i, n, k = 0, len = 0;
 	char *mystr;
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
+
 	for (i = 0; i < ac; i++)
 	{
 		for (n = 0; av[i][n]; n++)
@@ -24,17 +26,17 @@ char *argstostr(int ac, char **av)
 		free(mystr);
 		return (NULL);
 	}
-	 for (i = 0; i < ac; i++)
-	 {
-		 for (n = 0; av[i][n]; n++)
-		 {
-			 mystr[k] = av[i][n];
-			 k++;
-		 }
-		 if (mystr[k] == '\0')
-		 {
-			 mystr[k++] = '\n';
-		 }
-	 }
+	for (i = 0; i < ac; i++)
+	{
+		for (n = 0; av[i][n]; n++)
+		{
+			mystr[k] = av[i][n];
+			k++;
+		}
+		if (mystr[k] == '\0')
+		{
+			mystr[k++] = '\n';
+		}
+	}
 	return (mystr);
 }
