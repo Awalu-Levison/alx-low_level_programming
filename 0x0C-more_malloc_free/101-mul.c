@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 			remainder /= 10;
 		}
 		if (remainder > 0)
-			my_ptr[len1 + len2 + 1] += remainder;
+			my_ptr[len1 + j + 1] += remainder;
 	}
 	for (i = 0; i < my_len - 1; i++)
 	{
