@@ -17,7 +17,6 @@ int digit_checker(char *s)
 	}
 	return (1);
 }
-
 /**
  * _strlength - A function that calculate the string length
  * @s: String given by the user
@@ -33,7 +32,6 @@ int _strlength(char *s)
 	}
 	return (length);
 }
-
 /**
  * error_print - A function that prints error
  * Return: void
@@ -43,7 +41,6 @@ void error_print(void)
 	printf("Error\n");
 	exit(98);
 }
-
 /**
  * main - A function that multiplies two positive base 10 numbers
  * @argc: Argument count
@@ -58,15 +55,15 @@ int main(int argc, char **argv)
 	num3 = 0;
 	s1 = argv[1];
 	s2 = argv[2];
-
 	if (argc != 3 || !digit_checker(s1) || !digit_checker(s2))
 		error_print();
 	len1 = _strlength(s1);
 	len2 = _strlength(s2);
 	my_len = len1 + len2 + 1;
-	my_ptr = malloc(sizeof(int) * my_len);
+	my_ptr = malloc(sizeof(int) * (my_len));
 	if (!my_ptr)
 		return (1);
+	free(my_ptr);
 	for (i = 0; i <= len1 + len2; i++)
 		my_ptr[i] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
@@ -92,5 +89,4 @@ int main(int argc, char **argv)
 		_putchar('0');
 	_putchar('\n');
 	free(my_ptr);
-	return (0);
 }
