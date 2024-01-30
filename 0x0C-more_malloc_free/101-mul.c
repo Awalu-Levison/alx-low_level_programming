@@ -1,4 +1,5 @@
 #include "main.h"
+int _putchar(char c);
 #define ERR_MSG "Error"
 /**
  * digit_checker - A function that checks
@@ -89,4 +90,5 @@ int main(int argc, char **argv)
 		_putchar('0');
 	_putchar('\n');
 	free(my_ptr);
+	return (0);
 }
