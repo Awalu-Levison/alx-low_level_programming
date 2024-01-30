@@ -50,9 +50,8 @@ void error_print(void)
 int main(int argc, char **argv)
 {
 	char *s1, *s2;
-	int i, my_len, len2, len1, num1, num2, num3, remainder, *my_ptr;
+	int i, my_len, len2, len1, num1, num2, num3 = 0, remainder, *my_ptr;
 
-	num3 = 0;
 	s1 = argv[1];
 	s2 = argv[2];
 	if (argc != 3 || !digit_checker(s1) || !digit_checker(s2))
@@ -63,21 +62,22 @@ int main(int argc, char **argv)
 	my_ptr = malloc(sizeof(int) * (my_len));
 	if (!my_ptr)
 		return (1);
-	free(my_ptr);
 	for (i = 0; i <= len1 + len2; i++)
 		my_ptr[i] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
-		num1 = s1[my_len] - '0';
+		num1 = s1[len1] - '0';
 		remainder = 0;
 		for (len2 = len2 - 1; len2 >= 0; len2--)
+		{
 			num2 = s2[len2] - '0';
-		remainder += my_ptr[len1 + len2 + 1] + (num1 * num2);
-		my_ptr[len1 + len2 + 1] = remainder % 10;
-		remainder /= 10;
+			remainder += my_ptr[len1 + len2 + 1] + (num1 * num2);
+			my_ptr[len1 + len2 + 1] = remainder % 10;
+			remainder /= 10;
+		}
+		if (remainder > 0)
+			my_ptr[len1 + len2 + 1] += remainder;
 	}
-	if (remainder > 0)
-		my_ptr[len1 + len2 + 1] += remainder;
 	for (i = 0; i < my_len - 1; i++)
 	{
 		if (my_ptr[i])
@@ -89,4 +89,5 @@ int main(int argc, char **argv)
 		_putchar('0');
 	_putchar('\n');
 	free(my_ptr);
+	return (0);
 }
