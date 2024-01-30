@@ -50,7 +50,7 @@ void error_print(void)
 int main(int argc, char **argv)
 {
 	char *s1, *s2;
-	int i, my_len, len2, len1, num1, num2, num3 = 0, remainder, *my_ptr;
+	int i, my_len, j, len2, len1, num1, num2, num3 = 0, remainder, *my_ptr;
 
 	s1 = argv[1];
 	s2 = argv[2];
@@ -68,11 +68,11 @@ int main(int argc, char **argv)
 	{
 		num1 = s1[len1] - '0';
 		remainder = 0;
-		for (len2 = len2 - 1; len2 >= 0; len2--)
+		for (j = len2 - 1; j >= 0; j--)
 		{
-			num2 = s2[len2] - '0';
-			remainder += my_ptr[len1 + len2 + 1] + (num1 * num2);
-			my_ptr[len1 + len2 + 1] = remainder % 10;
+			num2 = s2[j] - '0';
+			remainder += my_ptr[len1 + j + 1] + (num1 * num2);
+			my_ptr[len1 + j + 1] = remainder % 10;
 			remainder /= 10;
 		}
 		if (remainder > 0)
@@ -89,5 +89,4 @@ int main(int argc, char **argv)
 		_putchar('0');
 	_putchar('\n');
 	free(my_ptr);
-	return (0);
 }
