@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * binary_to_uint - Converting binary to unsigned int
  * @b: A character parameter to be used
