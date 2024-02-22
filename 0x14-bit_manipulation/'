@@ -1,0 +1,6 @@
+#include "main.h"
+/**
+ * set_bit - A function that set bit at given index
+ * @n: The number given by user
+ * @index: Position of the bit value
+ */
