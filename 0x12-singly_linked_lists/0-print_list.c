@@ -22,7 +22,7 @@ size_t print_list(const list_t *h)
 			printf("%u %s\n", h->len, h->str);
 		h = h->next;
 	}
-	printf("%u %s\n", h->len, "(nil)");
+	printf("%u %s\n", h->len, h->str);
 	return (j);
 
 }
