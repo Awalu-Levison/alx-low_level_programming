@@ -1,5 +1,5 @@
 #include "lists.h"
-int length(const char *str);
+/*int length(const char *str);*/
 /**
  * length - Length of string
  * @str: Const string of characters
@@ -40,8 +40,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	lastnode->next = NULL;
 
 	if (*head == NULL)
+	{
 		*head = lastnode;
-
+		return (*head);
+	}
+	temp = *head;
 	while (temp->next != NULL)
 	{
 		temp = temp->next;
