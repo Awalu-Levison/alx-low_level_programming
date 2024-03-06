@@ -24,7 +24,7 @@ listint_t *new_node_creation(int n)
  * @head: Pointing to first node
  * @idx: Index at which the new node is to be added
  * @n: Data inside the node
- * @Return: The new address of new node
+ * Return: The new address of new node
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx,	int n)
 {
