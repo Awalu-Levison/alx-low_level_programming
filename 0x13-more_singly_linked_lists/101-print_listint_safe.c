@@ -6,18 +6,18 @@ void freemylist(list_s **head);
  */
 void freemylist(list_s **head)
 {
-	list_s *ptr1, *ptr2;
+	list_s *current;
+	list_s *nextptr;
 
-	if (head != NULL)
+	current = *head; /*Assign list to current var*/
+
+	while (current != NULL)
 	{
-		ptr1 = *head;
-		while ((ptr1 = ptr2) != NULL)
-		{
-			ptr2 = ptr2->next;
-			free(ptr1);
-		}
-		*head = NULL;
+		nextptr = current->next;
+		free(current);
+		current = nextptr;
 	}
+	*head = NULL;
 }
 /**
  * print_listint_safe - Safe list printing
@@ -28,34 +28,30 @@ size_t print_listint_safe(const listint_t *head)
 {
 	size_t i = 0;
 
-	listint_t *ptr, *new, *add;
+	const listint_t *ptr1;
+	const listint_t *ptr2;
 
-	ptr = NULL;
-	while (ptr != NULL)
+	ptr1 = head;
+	ptr2 = head;
+
+	if (head == NULL)
+		exit(98);
+	while (ptr2 != NULL && ptr2->next != NULL)
 	{
-		new = malloc(sizeof(listint_t));
-		if (new == NULL)
-			exit(98);
-		new->p = (void *)head; /*Define p*/
-		new->next = ptr;
-		ptr = new;
+		printf("[%p] %d\n", (void *)ptr1, ptr1->n);
 
-		add = ptr;
+		ptr1 = ptr1->next;
 
-		while (add->next != NULL)
+		ptr2 = ptr2->next->next;
+
+		if (ptr1 == ptr2)
 		{
-			add = add->next;
-			if (head == add->p)
-			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
-				freemylist(&ptr);
-				return (i);
-			}
+			printf("-> [%p] %d\n", (void *)ptr1, ptr1->n);
+			break;
 		}
-		printf("-> [%p] %d\n", (void *)head, head->n);
-		head = head->next;
 		i++;
 	}
-	freemylist(&ptr);
+	if (ptr1 == NULL || ptr1->next == NULL)
+		printf("-> [NULL] %d\n", ptr1->n);
 	return (i);
 }
