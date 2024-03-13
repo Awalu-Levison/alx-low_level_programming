@@ -1,68 +1,114 @@
 #include "main.h"
-void checker(int fd, int state, char *filename, char mode);
 
 /**
- * checker - Checking the file condition
- * @fd: The file descriptor
- * @state: State of the file fail or success
- * @filename: Pointer to the actual name
- * @mode: The mode of the file access
+ * arg_check - A function that checks if the correct number
+ * of arguments are entered
+ * @argc: The number of args
+ *
+ * Return: Nothing
  */
-void checker(int fd, int state, char *filename, char mode)
+void arg_check(int argc)
 {
-	if (mode == 'C' && state == -1)
+	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
-	else if (mode == 'O' && state == 0)
+}
+
+/**
+ * read_check - checks readability of src file
+ * @check: checks if true of false
+ * @file: file_from name
+ * @src: file descriptor of src
+ * @dest: File descriptor of dest
+ *
+ * Return: Nothing
+ */
+void read_check(ssize_t check, char *file, int src, int dest)
+{
+	if (check == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
+		if (src != -1)
+			close(src);
+		if (dest != -1)
+			close(dest);
 		exit(98);
 	}
-	else if (mode == 'W' && state == -1)
+}
+
+/**
+ * write_check - checks write operation from src to dest file
+ * @check: checks if true of false
+ * @file: file_to name
+ * @src: File descriptor of src
+ * @dest: file descriptor of dest
+ *
+ * Return: Nothing
+ */
+void write_check(ssize_t check, char *file, int src, int dest)
+{
+	if (check == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		if (src != -1)
+			close(src);
+		if (src != -1)
+			close(dest);
 		exit(99);
 	}
 }
 
 /**
- * main - A function that copies contents from one file to another file
- * @argc: Argumentys counting
- * @argv: Actual arguments
- * Return: 0 on sucess
+ * close_check - checks f closing is done normally
+ * @check: checks if true or false
+ * @fd: file descriptor
+ *
+ * Return: Nothing
+ */
+void close_check(int check, int fd)
+{
+	if (check == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+/**
+ * main - A function that copies content
+ * from one file to another file
+ * @argc: number of arguments passed
+ * @argv: array of pointers to the arguments
+ *
+ * Return: 0 on successful execution
  */
 int main(int argc, char *argv[])
 {
-	int src, dest, file_write;
-	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	int src, dest, close_to, close_from;
+	ssize_t lenr, lenw;
 	char buffer[1024];
-	ssize_t n = 0;
+	mode_t file_perm;
 
-	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
-		exit(97);
-	}
+	arg_check(argc);
 	src = open(argv[1], O_RDONLY);
-	checker(src, src, argv[1], 'O');
-	dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
-	checker(dest, dest, argv[2], 'W');
-
-	/*while ((n = read(src, buffer, sizeof(buffer))) > 0)*/
-	while (n == 1024)
+	read_check((ssize_t)src, argv[1], -1, -1);
+	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
+	write_check((ssize_t)dest, argv[2], src, -1);
+	lenr = 1024;
+	while (lenr == 1024)
 	{
-		if (n == -1)
-			checker(-1, -1, argv[1], 'O');
-		file_write = write(dest, buffer, n);
-		if (file_write == -1)
-			checker(-1, -1, argv[2], 'W');
-		if (file_write != n)
-			checker(-1, -1, argv[2], 'W');
-		/*continue;*/
+		lenr = read(src, buffer, 1024);
+		read_check(lenr, argv[1], src, dest);
+		lenw = write(dest, buffer, lenr);
+		if (lenw != lenr)
+			lenw = -1;
+		write_check(lenw, argv[2], src, dest);
 	}
-	close(src);
-	close(dest);
+	close_to = close(dest);
+	close_from = close(src);
+	close_check(close_to, dest);
+	close_check(close_from, src);
 	return (0);
 }
