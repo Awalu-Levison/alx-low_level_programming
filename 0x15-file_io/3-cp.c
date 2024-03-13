@@ -35,10 +35,15 @@ void checker(int fd, int state, char *filename, char mode)
 
 int main(int argc, char *argv[])
 {
-	int src, dest, dest_close, src_close, file_writei;
+	int src, dest, dest_close, src_close, file_write, n = 1024;
+
+	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+
+	char buffer[1024];
+
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "%s", "Usage: cp file_from file_to");
 		exit(97);
 	}
 }
