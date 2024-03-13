@@ -50,13 +50,17 @@ int main(int argc, char *argv[])
 	dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
 	checker(dest, dest, argv[2], 'W');
 
-	while ((n = read(src, buffer, sizeof(buffer))) > 0)
+	/*while ((n = read(src, buffer, sizeof(buffer))) > 0)*/
+	while (n == 1024)
 	{
 		if (n == -1)
 			checker(-1, -1, argv[1], 'O');
 		file_write = write(dest, buffer, n);
 		if (file_write == -1)
 			checker(-1, -1, argv[2], 'W');
+		if (file_write != n)
+			checker(-1, -1, argv[2], 'W');
+		/*continue;*/
 	}
 	close(src);
 	close(dest);
