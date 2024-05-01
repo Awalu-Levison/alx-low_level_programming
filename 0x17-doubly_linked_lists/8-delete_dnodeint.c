@@ -11,7 +11,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *ptr2;
 	unsigned int i;
 
-	ptr1 = (*head);
+	ptr1 = *head;
 
 	/*Traverse the ptr1*/
 	if (ptr1 != NULL)
