@@ -16,7 +16,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	/*Traverse the ptr1*/
 	if (ptr1 != NULL)
 		while (ptr1->prev != NULL)
-		ptr1 = ptr1->prev;
+			ptr1 = ptr1->prev;
 	i = 0;
 	while (ptr1 != NULL)
 	{
