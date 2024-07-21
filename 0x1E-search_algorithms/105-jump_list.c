@@ -9,29 +9,29 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t i, j_size;
-	listint_t *node, *limit;
+	size_t step, step_size;
+	listint_t *node, *jump;
 
 	if (list == NULL || size == 0)
 		return (NULL);
 
-	i = 0;
-	j_size = sqrt(size);
-
-	for (node = limit = list; limit->index + 1 < size && limit->n < value;)
+	step = 0;
+	step_size = sqrt(size);
+	for (node = jump = list; jump->index + 1 < size && jump->n < value;)
 	{
-		node = limit;
-		for (i += j_size; limit->index < i; limit = limit->next)
+		node = jump;
+		for (step += step_size; jump->index < step; jump = jump->next)
 		{
-			if (limit->index + 1 == size)
+			if (jump->index + 1 == size)
 				break;
 		}
-		printf("Value checked at index [%ld]  = [%d]\n", limit->index, limit->n);
+		printf("Value checked at index [%ld] = [%d]\n", jump->index, jump->n);
 	}
-	printf("Value found between indexes [%ld] and [%ld]\n",
-			node->index, limit->index);
 
-	for (; node->index < limit->index && node->n < value; node = node->next)
+	printf("Value found between indexes [%ld] and [%ld]\n",
+			node->index, jump->index);
+
+	for (; node->index < jump->index && node->n < value; node = node->next)
 		printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 	printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 
