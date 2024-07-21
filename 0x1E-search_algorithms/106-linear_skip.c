@@ -8,7 +8,7 @@
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *node;
-	skiplist_t *jump;
+	skiplist_t *j;
 
 	if (list == NULL)
 		return (NULL);
