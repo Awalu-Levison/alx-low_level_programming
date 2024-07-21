@@ -15,7 +15,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 
 	for (node = j = list; j->next != NULL && j->n < value;)
 	{
-		node = jump;
+		node = j;
 		if (j->express != NULL)
 		{
 			j = j->express;
