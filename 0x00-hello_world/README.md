@@ -7,3 +7,18 @@ Write a script that runs a C file through the preprocessor and save the result i
 
 - The C file name will be saved in the variable $CFILE
 - The output should be saved in the file c
+
+## cat main.c 
+
+
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
